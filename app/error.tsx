@@ -12,6 +12,11 @@ export default function Error({
       <div className="rounded-xl border border-black/5 bg-white p-6 shadow-md dark:border-white/10 dark:bg-neutral-900">
         <h1 className="text-lg font-semibold text-neutral-900 dark:text-white">Something went wrong</h1>
         <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300">{error.message}</p>
+        {error.digest ? (
+          <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-400">
+            Digest: <span className="font-mono">{error.digest}</span>
+          </p>
+        ) : null}
         <button
           type="button"
           onClick={reset}
