@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect } from "react";
+
 export default function Error({
   error,
   reset,
@@ -7,6 +9,11 @@ export default function Error({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
+  useEffect(() => {
+    // Ensures the underlying exception (and digest) appears in Vercel logs.
+    console.error(error);
+  }, [error]);
+
   return (
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
       <div className="rounded-xl border border-black/5 bg-white p-6 shadow-md dark:border-white/10 dark:bg-neutral-900">

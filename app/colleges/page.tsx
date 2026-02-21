@@ -64,40 +64,42 @@ export default async function CollegesPage({
         ? { establishedYear: sortOrder }
         : { name: sortOrder };
 
-  const [total, colleges, optionAgg] = await Promise.all([
-    prisma.college.count({ where }),
-    prisma.college.findMany({
-      where,
-      orderBy,
-      skip,
-      take: pageSize,
-      select: {
-        id: true,
-        name: true,
-        slug: true,
-        state: true,
-        city: true,
-        address: true,
-        description: true,
-        establishedYear: true,
-        type: true,
-        approval: true,
-        logo: true,
-        _count: { select: { courses: true } },
-      },
-    }),
-    prisma.college.findMany({
-      select: { state: true, city: true, type: true, approval: true },
-    }),
-  ]);
+  const [total, colleges, statesAgg, citiesAgg, typesAgg, approvalsAgg] =
+    await Promise.all([
+      prisma.college.count({ where }),
+      prisma.college.findMany({
+        where,
+        orderBy,
+        skip,
+        take: pageSize,
+        select: {
+          id: true,
+          name: true,
+          slug: true,
+          state: true,
+          city: true,
+          address: true,
+          description: true,
+          establishedYear: true,
+          type: true,
+          approval: true,
+          logo: true,
+          _count: { select: { courses: true } },
+        },
+      }),
+      prisma.college.findMany({ distinct: ["state"], select: { state: true } }),
+      prisma.college.findMany({ distinct: ["city"], select: { city: true } }),
+      prisma.college.findMany({ distinct: ["type"], select: { type: true } }),
+      prisma.college.findMany({ distinct: ["approval"], select: { approval: true } }),
+    ]);
 
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
 
   const options = {
-    states: optionAgg.map((c) => c.state),
-    cities: optionAgg.map((c) => c.city),
-    types: optionAgg.map((c) => c.type),
-    approvals: optionAgg.map((c) => c.approval),
+    states: statesAgg.map((c) => c.state),
+    cities: citiesAgg.map((c) => c.city),
+    types: typesAgg.map((c) => c.type),
+    approvals: approvalsAgg.map((c) => c.approval),
   };
 
   return (

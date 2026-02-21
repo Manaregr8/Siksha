@@ -73,7 +73,15 @@ export default async function Courses2YearsPage({
   const orderBy: Prisma.CourseOrderByWithRelationInput =
     sort === "name" ? { name: sortOrder } : { fees: sortOrder };
 
-  const [total, courses, optionAgg, categoriesAgg] = await Promise.all([
+  const [
+    total,
+    courses,
+    statesAgg,
+    citiesAgg,
+    typesAgg,
+    approvalsAgg,
+    categoriesAgg,
+  ] = await Promise.all([
     prisma.course.count({ where }),
     prisma.course.findMany({
       where,
@@ -100,9 +108,10 @@ export default async function Courses2YearsPage({
         },
       },
     }),
-    prisma.college.findMany({
-      select: { state: true, city: true, type: true, approval: true },
-    }),
+    prisma.college.findMany({ distinct: ["state"], select: { state: true } }),
+    prisma.college.findMany({ distinct: ["city"], select: { city: true } }),
+    prisma.college.findMany({ distinct: ["type"], select: { type: true } }),
+    prisma.college.findMany({ distinct: ["approval"], select: { approval: true } }),
     prisma.course.findMany({
       where: { duration: 2 },
       distinct: ["category"],
@@ -113,10 +122,10 @@ export default async function Courses2YearsPage({
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
 
   const options = {
-    states: optionAgg.map((c) => c.state),
-    cities: optionAgg.map((c) => c.city),
-    types: optionAgg.map((c) => c.type),
-    approvals: optionAgg.map((c) => c.approval),
+    states: statesAgg.map((c) => c.state),
+    cities: citiesAgg.map((c) => c.city),
+    types: typesAgg.map((c) => c.type),
+    approvals: approvalsAgg.map((c) => c.approval),
     categories: categoriesAgg.map((c) => c.category),
   };
 
