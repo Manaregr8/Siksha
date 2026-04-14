@@ -41,23 +41,23 @@ function AccordionRow({
   onToggle: () => void;
 }) {
   return (
-    <div className="rounded-2xl border border-black/5 bg-white/70 shadow-md backdrop-blur-xl transition-all duration-300 ease-out hover:shadow-xl dark:border-white/10 dark:bg-neutral-900/60">
+    <div className="rounded-2xl border border-slate-900/5 bg-white/70 shadow-md backdrop-blur-xl transition-all duration-300 ease-out hover:shadow-xl dark:border-white/10 dark:bg-slate-900/60">
       <button
         type="button"
         onClick={onToggle}
         className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
       >
-        <span className="text-sm font-semibold text-neutral-900 dark:text-white">
+        <span className="text-sm font-semibold text-slate-900 dark:text-white">
           {item.q}
         </span>
         <span
-          className={`grid h-10 w-10 place-items-center rounded-xl border border-black/10 bg-white/80 transition-all duration-300 ease-out dark:border-white/10 dark:bg-neutral-950/60 ${
+          className={`grid h-10 w-10 place-items-center rounded-xl border border-slate-900/10 bg-white/80 transition-all duration-300 ease-out dark:border-white/10 dark:bg-slate-950/60 ${
             open ? "shadow-md" : "shadow-sm"
           }`}
           aria-hidden="true"
         >
           <Plus
-            className={`h-5 w-5 text-neutral-700 transition-transform duration-300 ease-out dark:text-neutral-200 ${
+            className={`h-5 w-5 text-slate-700 transition-transform duration-300 ease-out dark:text-slate-200 ${
               open ? "rotate-45" : "rotate-0"
             }`}
           />
@@ -70,7 +70,7 @@ function AccordionRow({
         }`}
       >
         <div className="overflow-hidden px-5">
-          <div className="pb-5 text-sm leading-7 text-neutral-600 dark:text-neutral-300">
+          <div className="pb-5 text-sm leading-7 text-slate-600 dark:text-slate-300">
             {item.a}
           </div>
         </div>
@@ -85,22 +85,22 @@ export function FaqSection() {
   const list = useMemo(() => items, []);
 
   return (
-    <section className="bg-white py-16 dark:bg-neutral-900">
+    <section className="bg-white py-16 dark:bg-slate-900">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1fr] lg:items-start">
           <div>
-            <h2 className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-white sm:text-3xl">
+            <h2 className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-3xl">
               FAQs
             </h2>
-            <p className="mt-3 max-w-prose text-sm leading-7 text-neutral-600 dark:text-neutral-300">
+            <p className="mt-3 max-w-prose text-sm leading-7 text-slate-600 dark:text-slate-300">
               Everything you need to know — clean answers, no noise.
             </p>
 
-            <div className="mt-6 rounded-3xl border border-black/5 bg-neutral-50 p-6 shadow-md dark:border-white/10 dark:bg-neutral-950">
-              <div className="text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
+            <div className="mt-6 rounded-3xl border border-slate-900/5 bg-slate-50 p-6 shadow-md dark:border-white/10 dark:bg-slate-950">
+              <div className="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">
                 Support
               </div>
-              <div className="mt-2 text-sm text-neutral-700 dark:text-neutral-200">
+              <div className="mt-2 text-sm text-slate-700 dark:text-slate-200">
                 If you want a custom learning plan, we can tailor a track for your goals.
               </div>
               <div className="mt-4 text-sm font-medium text-blue-600">

@@ -116,46 +116,53 @@ export default async function Home() {
     <div>
       <section
         id="top"
-        className="relative overflow-hidden bg-neutral-50 py-16 dark:bg-neutral-950"
+        className="relative overflow-hidden bg-slate-50 px-4 py-24 sm:px-6 lg:px-8 dark:bg-slate-950"
       >
         <div className="absolute inset-0 z-0">
           <HeroCarousel images={carouselImages} />
         </div>
-        <div className="pointer-events-none absolute inset-0 z-10 bg-white/80 backdrop-blur-sm dark:bg-neutral-950/70" />
-        <div className="relative z-20 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-3xl font-semibold tracking-tight text-neutral-900 dark:text-white sm:text-5xl">
+        {/* Left-to-right gradient overlay, making left opaque and right transparent so images pop */}
+        <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-slate-50 from-40% via-slate-50/90 via-60% to-transparent dark:from-slate-950 dark:via-slate-950/90" />
+        
+        <div className="relative z-20 mx-auto max-w-7xl">
+          {/* Left-aligned content container */}
+          <div className="max-w-4xl text-left">
+            <div className="mb-6 inline-flex items-center rounded-full border border-blue-600/10 bg-blue-50/80 px-3 py-1 text-sm font-medium text-blue-600 backdrop-blur-sm dark:border-blue-400/20 dark:bg-blue-900/40 dark:text-blue-300">
+              <Sparkles className="mr-2 h-4 w-4" />
+              Your Future Starts Here
+            </div>
+            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-[3.5rem] xl:whitespace-nowrap bg-gradient-to-r from-blue-700 via-indigo-600 to-cyan-600 bg-clip-text text-transparent dark:from-blue-400 dark:via-indigo-300 dark:to-cyan-400 pb-2">
               Find the Best Colleges in India
             </h1>
-            <p className="mt-4 text-base leading-7 text-neutral-600 dark:text-neutral-300">
-              Search by college, course, or city. Filter by duration, fees and location.
+            <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-300 max-w-2xl">
+              Search by college, course, or city. Filter by duration, fees and location to discover your perfect educational path.
             </p>
-            <div className="mt-8">
+            <div className="mt-8 max-w-xl rounded-2xl bg-white/80 p-2 shadow-sm backdrop-blur-md dark:bg-slate-900/80 border border-slate-900/5">
               <SearchBar actionPath="/colleges" />
             </div>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-3">
             <Link
               href="/colleges"
-              className="group relative overflow-hidden rounded-3xl border border-black/5 bg-white/60 p-6 shadow-md backdrop-blur-xl transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl dark:border-white/10 dark:bg-neutral-900/55"
+              className="group relative overflow-hidden rounded-[2rem] border border-slate-900/5 bg-white/70 p-8 shadow-sm backdrop-blur-xl transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/10 dark:border-white/10 dark:bg-slate-900/55"
             >
               <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-blue-500/10 to-cyan-500/10" />
               </div>
 
               <div className="relative flex items-start gap-4">
-                <div className="grid h-11 w-11 place-items-center rounded-2xl border border-black/10 bg-white/70 shadow-sm backdrop-blur dark:border-white/10 dark:bg-neutral-950/60">
+                <div className="grid h-11 w-11 place-items-center rounded-2xl border border-slate-900/10 bg-white/70 shadow-sm backdrop-blur dark:border-white/10 dark:bg-slate-950/60">
                   <Building2 className="h-5 w-5 text-blue-700 dark:text-blue-300" />
                 </div>
                 <div className="min-w-0">
-                  <div className="text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
+                  <div className="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">
                     Explore
                   </div>
-                  <div className="mt-1 text-xl font-semibold tracking-tight text-neutral-900 dark:text-white">
+                  <div className="mt-1 text-xl font-semibold tracking-tight text-slate-900 dark:text-white">
                     Colleges
                   </div>
-                  <p className="mt-2 text-sm leading-7 text-neutral-600 dark:text-neutral-300">
+                  <p className="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">
                     Discover verified listings by city and state.
                   </p>
                   <div className="mt-5 text-sm font-semibold text-blue-600 transition-colors group-hover:text-blue-700">
@@ -167,24 +174,24 @@ export default async function Home() {
 
             <Link
               href="/courses/2-years"
-              className="group relative overflow-hidden rounded-3xl border border-black/5 bg-white/60 p-6 shadow-md backdrop-blur-xl transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl dark:border-white/10 dark:bg-neutral-900/55"
+              className="group relative overflow-hidden rounded-[2rem] border border-slate-900/5 bg-white/70 p-8 shadow-sm backdrop-blur-xl transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/10 dark:border-white/10 dark:bg-slate-900/55"
             >
               <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-blue-500/10 to-cyan-500/10" />
               </div>
 
               <div className="relative flex items-start gap-4">
-                <div className="grid h-11 w-11 place-items-center rounded-2xl border border-black/10 bg-white/70 shadow-sm backdrop-blur dark:border-white/10 dark:bg-neutral-950/60">
+                <div className="grid h-11 w-11 place-items-center rounded-2xl border border-slate-900/10 bg-white/70 shadow-sm backdrop-blur dark:border-white/10 dark:bg-slate-950/60">
                   <GraduationCap className="h-5 w-5 text-blue-700 dark:text-blue-300" />
                 </div>
                 <div className="min-w-0">
-                  <div className="text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
+                  <div className="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">
                     Programs
                   </div>
-                  <div className="mt-1 text-xl font-semibold tracking-tight text-neutral-900 dark:text-white">
+                  <div className="mt-1 text-xl font-semibold tracking-tight text-slate-900 dark:text-white">
                     2‑Year Programs
                   </div>
-                  <p className="mt-2 text-sm leading-7 text-neutral-600 dark:text-neutral-300">
+                  <p className="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">
                     Explore postgraduate & professional courses.
                   </p>
                   <div className="mt-5 text-sm font-semibold text-blue-600 transition-colors group-hover:text-blue-700">
@@ -196,24 +203,24 @@ export default async function Home() {
 
             <Link
               href="/courses/3-years"
-              className="group relative overflow-hidden rounded-3xl border border-black/5 bg-white/60 p-6 shadow-md backdrop-blur-xl transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl dark:border-white/10 dark:bg-neutral-900/55"
+              className="group relative overflow-hidden rounded-[2rem] border border-slate-900/5 bg-white/70 p-8 shadow-sm backdrop-blur-xl transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/10 dark:border-white/10 dark:bg-slate-900/55"
             >
               <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-blue-500/10 to-cyan-500/10" />
               </div>
 
               <div className="relative flex items-start gap-4">
-                <div className="grid h-11 w-11 place-items-center rounded-2xl border border-black/10 bg-white/70 shadow-sm backdrop-blur dark:border-white/10 dark:bg-neutral-950/60">
+                <div className="grid h-11 w-11 place-items-center rounded-2xl border border-slate-900/10 bg-white/70 shadow-sm backdrop-blur dark:border-white/10 dark:bg-slate-950/60">
                   <Sparkles className="h-5 w-5 text-blue-700 dark:text-blue-300" />
                 </div>
                 <div className="min-w-0">
-                  <div className="text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
+                  <div className="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">
                     Programs
                   </div>
-                  <div className="mt-1 text-xl font-semibold tracking-tight text-neutral-900 dark:text-white">
+                  <div className="mt-1 text-xl font-semibold tracking-tight text-slate-900 dark:text-white">
                     3‑Year Programs
                   </div>
-                  <p className="mt-2 text-sm leading-7 text-neutral-600 dark:text-neutral-300">
+                  <p className="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">
                     Explore undergraduate courses across streams.
                   </p>
                   <div className="mt-5 text-sm font-semibold text-blue-600 transition-colors group-hover:text-blue-700">
@@ -226,26 +233,26 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="bg-white py-16 dark:bg-neutral-900">
+      <section className="bg-white py-16 dark:bg-slate-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
             <div>
-              <h2 className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-white">
+              <h2 className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-white">
                 About us
               </h2>
-              <p className="mt-3 text-sm leading-7 text-neutral-600 dark:text-neutral-300">
+              <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
                 Shiksha helps students discover colleges and compare courses across India.
                 Search by college, course, or city, then use simple filters to narrow down your
                 options based on duration, fees, and location.
               </p>
-              <p className="mt-3 text-sm leading-7 text-neutral-600 dark:text-neutral-300">
+              <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
                 This portal is built to be fast, mobile-friendly, and easy to browse — whether
                 you are exploring 2-year postgraduate programs or 3-year undergraduate courses.
               </p>
             </div>
 
             <div className="space-y-4">
-              <div className="relative overflow-hidden rounded-3xl border border-black/5 bg-neutral-50 shadow-md dark:border-white/10 dark:bg-neutral-950">
+              <div className="relative overflow-hidden rounded-3xl border border-slate-900/5 bg-slate-50 shadow-md dark:border-white/10 dark:bg-slate-950">
                 <div className="relative aspect-[16/10] w-full">
                   <Image
                     src="/dizitaladda%20classroom.webp"
@@ -272,12 +279,12 @@ export default async function Home() {
         <CourseCardsSection />
       </div>
 
-      <section id="popular-states" className="bg-neutral-50 py-16 dark:bg-neutral-950">
+      <section id="popular-states" className="bg-slate-50 py-16 dark:bg-slate-950">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-white">
+          <h2 className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-white">
             Popular states
           </h2>
-          <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300">
+          <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
             Browse colleges by location.
           </p>
 
@@ -297,10 +304,10 @@ export default async function Home() {
               <Link
                 key={s}
                 href={`/colleges?state=${encodeURIComponent(s)}`}
-                className="group flex items-center gap-3 rounded-2xl border border-black/5 bg-white px-4 py-3 text-sm font-medium text-neutral-800 shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl dark:border-white/10 dark:bg-neutral-900 dark:text-neutral-100"
+                className="group flex items-center gap-3 rounded-2xl border border-slate-900/5 bg-white px-4 py-3 text-sm font-medium text-slate-800 shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl dark:border-white/10 dark:bg-slate-900 dark:text-slate-100"
               >
                 <span
-                  className={`grid h-9 w-9 shrink-0 place-items-center rounded-2xl border border-black/10 bg-gradient-to-br ${chipBg} shadow-sm dark:border-white/10`}
+                  className={`grid h-9 w-9 shrink-0 place-items-center rounded-2xl border border-slate-900/10 bg-gradient-to-br ${chipBg} shadow-sm dark:border-white/10`}
                   aria-hidden="true"
                 >
                   <Icon className="h-4 w-4 text-blue-800 dark:text-blue-200" />
@@ -322,10 +329,10 @@ export default async function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-end justify-between gap-4">
             <div>
-              <h2 className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-white">
+              <h2 className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-white">
                 Featured colleges
               </h2>
-              <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300">
+              <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
                 A quick starting point for exploration.
               </p>
             </div>

@@ -31,11 +31,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full" suppressHydrationWarning>
+    <html lang="en" className="h-full light" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-full bg-white text-neutral-800 antialiased dark:bg-neutral-950 dark:text-neutral-100`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-full bg-slate-50 text-slate-800 antialiased`}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem storageKey="gss-theme">
+        <ThemeProvider attribute="class" defaultTheme="light" forcedTheme="light" storageKey="gss-theme">
           <Navbar />
           <main>{children}</main>
           <Footer />

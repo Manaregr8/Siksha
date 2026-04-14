@@ -35,12 +35,12 @@ export function SearchBar({
 
   return (
     <form onSubmit={onSubmit} className="w-full">
-      <div className="flex w-full items-center gap-3 rounded-xl border border-black/5 bg-white p-2 shadow-md dark:border-white/10 dark:bg-neutral-900">
+      <div className="flex w-full items-center gap-3 rounded-xl border border-slate-900/5 bg-white p-2 shadow-md dark:border-white/10 dark:bg-slate-900">
         <input
           value={value}
           onChange={(e) => setValue(e.target.value)}
           placeholder={placeholder}
-          className="h-11 w-full rounded-xl bg-transparent px-3 text-sm text-neutral-900 outline-none placeholder:text-neutral-500 dark:text-white"
+          className="h-11 w-full rounded-xl bg-transparent px-3 text-sm text-slate-900 outline-none placeholder:text-slate-500 dark:text-white"
         />
         <button
           type="submit"

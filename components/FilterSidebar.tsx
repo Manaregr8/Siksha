@@ -126,13 +126,13 @@ export function FilterSidebar({ kind, options }: Props) {
   const categories = uniqSorted(options.categories ?? []);
 
   return (
-    <aside className="rounded-xl border border-black/5 bg-white p-4 shadow-md dark:border-white/10 dark:bg-neutral-900">
+    <aside className="rounded-xl border border-slate-900/5 bg-white p-4 shadow-md dark:border-white/10 dark:bg-slate-900">
       <div className="flex items-center justify-between">
-        <h2 className="text-sm font-semibold text-neutral-900 dark:text-white">Filters</h2>
+        <h2 className="text-sm font-semibold text-slate-900 dark:text-white">Filters</h2>
         <button
           type="button"
           onClick={reset}
-          className="text-xs font-medium text-neutral-600 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white"
+          className="text-xs font-medium text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
         >
           Reset
         </button>
@@ -188,13 +188,13 @@ type SelectProps = {
 function Select({ label, value, onChange, options, allowRaw }: SelectProps) {
   return (
     <label className="block">
-      <div className="mb-1 text-xs font-medium text-neutral-600 dark:text-neutral-300">
+      <div className="mb-1 text-xs font-medium text-slate-600 dark:text-slate-300">
         {label}
       </div>
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="h-10 w-full rounded-xl border border-black/5 bg-white px-3 text-sm text-neutral-900 outline-none dark:border-white/10 dark:bg-neutral-950 dark:text-white"
+        className="h-10 w-full rounded-xl border border-slate-900/5 bg-white px-3 text-sm text-slate-900 outline-none dark:border-white/10 dark:bg-slate-950 dark:text-white"
       >
         <option value="">All</option>
         {(allowRaw ? options : options).map((opt) => (
@@ -216,14 +216,14 @@ type InputProps = {
 function Input({ label, value, onChange }: InputProps) {
   return (
     <label className="block">
-      <div className="mb-1 text-xs font-medium text-neutral-600 dark:text-neutral-300">
+      <div className="mb-1 text-xs font-medium text-slate-600 dark:text-slate-300">
         {label}
       </div>
       <input
         value={value}
         onChange={(e) => onChange(e.target.value)}
         inputMode="numeric"
-        className="h-10 w-full rounded-xl border border-black/5 bg-white px-3 text-sm text-neutral-900 outline-none placeholder:text-neutral-500 dark:border-white/10 dark:bg-neutral-950 dark:text-white"
+        className="h-10 w-full rounded-xl border border-slate-900/5 bg-white px-3 text-sm text-slate-900 outline-none placeholder:text-slate-500 dark:border-white/10 dark:bg-slate-950 dark:text-white"
         placeholder="0"
       />
     </label>

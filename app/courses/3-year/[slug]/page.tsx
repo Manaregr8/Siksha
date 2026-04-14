@@ -76,49 +76,49 @@ export default async function Course3YearDetailPage({
             Back to 3-year courses
           </Link>
 
-          <h1 className="mt-3 text-2xl font-semibold tracking-tight text-neutral-900 dark:text-white">
+          <h1 className="mt-3 text-2xl font-semibold tracking-tight text-slate-900 dark:text-white">
             {course.name}
           </h1>
 
-          <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-300">
+          <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
             {course.category} • {course.duration} Years • ₹
             {course.fees.toLocaleString("en-IN")}
           </p>
         </div>
 
-        <div className="rounded-2xl border border-black/5 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-neutral-900">
+        <div className="rounded-2xl border border-slate-900/5 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-slate-900">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
-              <div className="text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
+              <div className="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">
                 Offered By
               </div>
               <Link
                 href={`/college/${course.college.slug}`}
-                className="mt-1 block text-base font-semibold text-neutral-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-400"
+                className="mt-1 block text-base font-semibold text-slate-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-400"
               >
                 {course.college.name}
               </Link>
-              <div className="mt-1 text-sm text-neutral-600 dark:text-neutral-300">
+              <div className="mt-1 text-sm text-slate-600 dark:text-slate-300">
                 {course.college.city}, {course.college.state} • {course.college.type} • {course.college.approval}
               </div>
             </div>
 
             <div>
-              <div className="text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
+              <div className="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">
                 Eligibility
               </div>
-              <div className="mt-1 text-sm text-neutral-700 dark:text-neutral-200">
+              <div className="mt-1 text-sm text-slate-700 dark:text-slate-200">
                 {course.eligibility}
               </div>
             </div>
           </div>
         </div>
 
-        <div className="rounded-2xl border border-black/5 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-neutral-900">
-          <h2 className="text-lg font-semibold text-neutral-900 dark:text-white">
+        <div className="rounded-2xl border border-slate-900/5 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-slate-900">
+          <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
             Modules
           </h2>
-          <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-300">
+          <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
             {moduleTitles.length > 0
               ? "Sample module plan for this course."
               : "No modules added yet for this course."}
@@ -129,14 +129,14 @@ export default async function Course3YearDetailPage({
               {moduleTitles.map((title, idx) => (
                 <div
                   key={`${course.id}-${idx}`}
-                  className="rounded-xl border border-black/10 bg-white px-4 py-3 text-sm text-neutral-800 dark:border-white/10 dark:bg-neutral-950 dark:text-neutral-100"
+                  className="rounded-xl border border-slate-900/10 bg-white px-4 py-3 text-sm text-slate-800 dark:border-white/10 dark:bg-slate-950 dark:text-slate-100"
                 >
                   <div className="font-medium">Module {idx + 1}</div>
-                  <div className="mt-1 text-neutral-700 dark:text-neutral-200">
+                  <div className="mt-1 text-slate-700 dark:text-slate-200">
                     {title}
                   </div>
                   {approxMonthsPerModule ? (
-                    <div className="mt-2 text-xs text-neutral-500 dark:text-neutral-400">
+                    <div className="mt-2 text-xs text-slate-500 dark:text-slate-400">
                       Approx duration: ≈{approxMonthsPerModule} months
                     </div>
                   ) : null}

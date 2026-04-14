@@ -48,7 +48,7 @@ function Stars({ rating }: { rating: number }) {
           className={`h-4 w-4 ${
             i < rating
               ? "text-blue-600 dark:text-blue-400"
-              : "text-neutral-300 dark:text-neutral-700"
+              : "text-slate-300 dark:text-slate-700"
           }`}
           fill={i < rating ? "currentColor" : "none"}
         />
@@ -74,7 +74,7 @@ function Quote({ quote, highlight }: { quote: string; highlight: string }) {
 
 export function TestimonialsSection() {
   return (
-    <section className="relative overflow-hidden bg-neutral-50 py-16 dark:bg-neutral-950">
+    <section className="relative overflow-hidden bg-slate-50 py-16 dark:bg-slate-950">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -left-24 -top-24 h-72 w-72 rounded-full bg-gradient-to-br from-indigo-500/20 via-blue-500/15 to-cyan-500/10 blur-2xl" />
         <div className="absolute -bottom-28 -right-28 h-80 w-80 rounded-full bg-gradient-to-br from-fuchsia-500/15 via-violet-500/10 to-blue-500/10 blur-2xl" />
@@ -82,10 +82,10 @@ export function TestimonialsSection() {
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-3">
-          <h2 className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-white sm:text-3xl">
+          <h2 className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-3xl">
             Loved by ambitious learners
           </h2>
-          <p className="max-w-2xl text-sm leading-7 text-neutral-600 dark:text-neutral-300">
+          <p className="max-w-2xl text-sm leading-7 text-slate-600 dark:text-slate-300">
             Glassy cards, honest feedback, and outcomes-focused learning — built like a funded startup.
           </p>
         </div>
@@ -95,7 +95,7 @@ export function TestimonialsSection() {
             {testimonials.map((t) => (
               <div
                 key={t.name}
-                className="group relative min-w-[280px] snap-start rounded-3xl border border-black/5 bg-white/60 p-6 shadow-md backdrop-blur-xl transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl dark:border-white/10 dark:bg-neutral-900/60"
+                className="group relative min-w-[280px] snap-start rounded-3xl border border-slate-900/5 bg-white/60 p-6 shadow-md backdrop-blur-xl transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl dark:border-white/10 dark:bg-slate-900/60"
               >
                 <div className="pointer-events-none absolute inset-0 rounded-3xl opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-indigo-500/10 via-blue-500/10 to-cyan-500/10" />
@@ -103,14 +103,14 @@ export function TestimonialsSection() {
 
                 <div className="relative flex items-start justify-between gap-4">
                   <div className="flex items-center gap-3">
-                    <div className="grid h-11 w-11 place-items-center rounded-full bg-gradient-to-br from-indigo-500/40 via-blue-500/30 to-cyan-500/30 text-sm font-semibold text-neutral-900 dark:text-white">
+                    <div className="grid h-11 w-11 place-items-center rounded-full bg-gradient-to-br from-indigo-500/40 via-blue-500/30 to-cyan-500/30 text-sm font-semibold text-slate-900 dark:text-white">
                       {t.avatarText}
                     </div>
                     <div className="min-w-0">
-                      <div className="truncate text-sm font-semibold text-neutral-900 dark:text-white">
+                      <div className="truncate text-sm font-semibold text-slate-900 dark:text-white">
                         {t.name}
                       </div>
-                      <div className="truncate text-xs text-neutral-600 dark:text-neutral-300">
+                      <div className="truncate text-xs text-slate-600 dark:text-slate-300">
                         {t.role}
                       </div>
                     </div>
@@ -119,7 +119,7 @@ export function TestimonialsSection() {
                   <Stars rating={t.rating} />
                 </div>
 
-                <div className="relative mt-4 text-sm leading-7 text-neutral-700 dark:text-neutral-200">
+                <div className="relative mt-4 text-sm leading-7 text-slate-700 dark:text-slate-200">
                   <span className="text-blue-700/70 dark:text-blue-300/70">“</span>
                   <Quote quote={t.quote} highlight={t.highlight} />
                   <span className="text-blue-700/70 dark:text-blue-300/70">”</span>
@@ -128,7 +128,7 @@ export function TestimonialsSection() {
             ))}
           </div>
 
-          <div className="mt-3 text-xs text-neutral-500 dark:text-neutral-400 sm:hidden">
+          <div className="mt-3 text-xs text-slate-500 dark:text-slate-400 sm:hidden">
             Swipe to explore testimonials
           </div>
         </div>

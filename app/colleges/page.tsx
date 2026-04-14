@@ -106,10 +106,10 @@ export default async function CollegesPage({
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
       <div className="flex flex-col gap-6">
         <div>
-          <h1 className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-white">
+          <h1 className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-white">
             Colleges in India
           </h1>
-          <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-300">
+          <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
             Search by college name, course, or city.
           </p>
         </div>
@@ -121,7 +121,7 @@ export default async function CollegesPage({
 
           <div>
             <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-              <p className="text-sm text-neutral-600 dark:text-neutral-300">
+              <p className="text-sm text-slate-600 dark:text-slate-300">
                 Showing {colleges.length} of {total} colleges
               </p>
               <Link
@@ -173,13 +173,13 @@ function Pagination({
         aria-disabled={page <= 1}
         className={`h-10 rounded-xl border px-4 text-sm font-medium transition-colors ${
           page <= 1
-            ? "pointer-events-none border-black/5 text-neutral-400 dark:border-white/10"
-            : "border-black/10 text-neutral-800 hover:bg-neutral-50 dark:border-white/10 dark:text-neutral-100 dark:hover:bg-neutral-800"
+            ? "pointer-events-none border-slate-900/5 text-slate-400 dark:border-white/10"
+            : "border-slate-900/10 text-slate-800 hover:bg-slate-50 dark:border-white/10 dark:text-slate-100 dark:hover:bg-slate-800"
         }`}
       >
         Prev
       </Link>
-      <div className="text-sm text-neutral-600 dark:text-neutral-300">
+      <div className="text-sm text-slate-600 dark:text-slate-300">
         Page {page} of {totalPages}
       </div>
       <Link
@@ -187,8 +187,8 @@ function Pagination({
         aria-disabled={page >= totalPages}
         className={`h-10 rounded-xl border px-4 text-sm font-medium transition-colors ${
           page >= totalPages
-            ? "pointer-events-none border-black/5 text-neutral-400 dark:border-white/10"
-            : "border-black/10 text-neutral-800 hover:bg-neutral-50 dark:border-white/10 dark:text-neutral-100 dark:hover:bg-neutral-800"
+            ? "pointer-events-none border-slate-900/5 text-slate-400 dark:border-white/10"
+            : "border-slate-900/10 text-slate-800 hover:bg-slate-50 dark:border-white/10 dark:text-slate-100 dark:hover:bg-slate-800"
         }`}
       >
         Next

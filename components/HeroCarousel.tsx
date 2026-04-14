@@ -86,11 +86,9 @@ export function HeroCarousel({ images }: Props) {
         {safeImages.map((img, idx) => (
           <div key={`${img.src}-${idx}`} className="relative h-full min-w-full snap-center">
             <div
-              className="absolute inset-0 bg-cover bg-center"
+              className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 ease-out"
               style={{ backgroundImage: `url(${img.src})` }}
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-neutral-950/35 via-neutral-950/10 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/10 via-transparent to-neutral-950/30" />
           </div>
         ))}
       </div>
@@ -101,7 +99,7 @@ export function HeroCarousel({ images }: Props) {
             type="button"
             onClick={prev}
             aria-label="Previous background"
-            className="absolute left-4 top-1/2 -translate-y-1/2 rounded-xl border border-white/15 bg-neutral-950/35 px-3 py-2 text-sm font-medium text-white backdrop-blur transition-colors hover:bg-neutral-950/50"
+            className="absolute left-4 top-1/2 -translate-y-1/2 rounded-xl border border-white/15 bg-slate-950/35 px-3 py-2 text-sm font-medium text-white backdrop-blur transition-colors hover:bg-slate-950/50"
           >
             Prev
           </button>
@@ -109,7 +107,7 @@ export function HeroCarousel({ images }: Props) {
             type="button"
             onClick={next}
             aria-label="Next background"
-            className="absolute right-4 top-1/2 -translate-y-1/2 rounded-xl border border-white/15 bg-neutral-950/35 px-3 py-2 text-sm font-medium text-white backdrop-blur transition-colors hover:bg-neutral-950/50"
+            className="absolute right-4 top-1/2 -translate-y-1/2 rounded-xl border border-white/15 bg-slate-950/35 px-3 py-2 text-sm font-medium text-white backdrop-blur transition-colors hover:bg-slate-950/50"
           >
             Next
           </button>

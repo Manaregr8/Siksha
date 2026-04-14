@@ -39,13 +39,13 @@ const items: GalleryItem[] = [
 
 export function GallerySection() {
   return (
-    <section className="bg-white py-16 dark:bg-neutral-900">
+    <section className="bg-white py-16 dark:bg-slate-900">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div>
-          <h2 className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-white sm:text-3xl">
+          <h2 className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-3xl">
             Gallery
           </h2>
-          <p className="mt-3 max-w-2xl text-sm leading-7 text-neutral-600 dark:text-neutral-300">
+          <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-600 dark:text-slate-300">
             A clean, premium grid with subtle overlays and smooth hover motion.
           </p>
         </div>
@@ -54,7 +54,7 @@ export function GallerySection() {
           {items.map((g) => (
             <div
               key={g.title}
-              className="group relative mb-4 break-inside-avoid overflow-hidden rounded-3xl border border-black/5 bg-neutral-50 shadow-md transition-all duration-300 ease-out hover:shadow-xl dark:border-white/10 dark:bg-neutral-950"
+              className="group relative mb-4 break-inside-avoid overflow-hidden rounded-3xl border border-slate-900/5 bg-slate-50 shadow-md transition-all duration-300 ease-out hover:shadow-xl dark:border-white/10 dark:bg-slate-950"
             >
               <img
                 src={g.src}
@@ -64,7 +64,7 @@ export function GallerySection() {
               />
 
               <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100">
-                <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/65 via-neutral-950/10 to-transparent dark:from-neutral-950/70" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/65 via-slate-950/10 to-transparent dark:from-slate-950/70" />
               </div>
 
               <div className="absolute bottom-0 left-0 right-0 p-5">

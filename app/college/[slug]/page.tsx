@@ -46,8 +46,8 @@ export default async function CollegeDetailPage({
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-      <div className="overflow-hidden rounded-xl border border-black/5 bg-white shadow-md dark:border-white/10 dark:bg-neutral-900">
-        <div className="relative h-44 overflow-hidden bg-neutral-100 dark:bg-neutral-800">
+      <div className="overflow-hidden rounded-xl border border-slate-900/5 bg-white shadow-md dark:border-white/10 dark:bg-slate-900">
+        <div className="relative h-44 overflow-hidden bg-slate-100 dark:bg-slate-800">
           {college.bannerImage ? (
             <div
               className="absolute inset-0 bg-cover bg-center"
@@ -56,11 +56,11 @@ export default async function CollegeDetailPage({
             />
           ) : null}
           <div
-            className="absolute inset-0 bg-gradient-to-r from-neutral-950/25 via-neutral-950/10 to-transparent dark:from-neutral-950/45 dark:via-neutral-950/15"
+            className="absolute inset-0 bg-gradient-to-r from-slate-950/25 via-slate-950/10 to-transparent dark:from-slate-950/45 dark:via-slate-950/15"
             aria-hidden="true"
           />
           <div
-            className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-neutral-950/20 dark:to-neutral-950/35"
+            className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-950/20 dark:to-slate-950/35"
             aria-hidden="true"
           />
         </div>
@@ -68,14 +68,14 @@ export default async function CollegeDetailPage({
         <div className="relative z-10 px-6 pb-6">
           <div className="-mt-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-end">
-              <div className="flex h-20 w-20 items-center justify-center rounded-xl border border-black/5 bg-white text-sm font-semibold text-neutral-900 shadow-md dark:border-white/10 dark:bg-neutral-950 dark:text-white">
+              <div className="flex h-20 w-20 items-center justify-center rounded-xl border border-slate-900/5 bg-white text-sm font-semibold text-slate-900 shadow-md dark:border-white/10 dark:bg-slate-950 dark:text-white">
                 Logo
               </div>
               <div>
-                <h1 className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-white">
+                <h1 className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-white">
                   {college.name}
                 </h1>
-                <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-300">
+                <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
                   {college.city}, {college.state}
                 </p>
               </div>
@@ -85,10 +85,10 @@ export default async function CollegeDetailPage({
               <span className="rounded-xl bg-blue-600/10 px-2.5 py-1 text-xs font-medium text-blue-600 dark:bg-blue-600/20">
                 {college.type}
               </span>
-              <span className="rounded-xl bg-neutral-100 px-2.5 py-1 text-xs font-medium text-neutral-700 dark:bg-neutral-800 dark:text-neutral-200">
+              <span className="rounded-xl bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 dark:bg-slate-800 dark:text-slate-200">
                 {college.approval}
               </span>
-              <span className="rounded-xl bg-neutral-100 px-2.5 py-1 text-xs font-medium text-neutral-700 dark:bg-neutral-800 dark:text-neutral-200">
+              <span className="rounded-xl bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 dark:bg-slate-800 dark:text-slate-200">
                 Est. {college.establishedYear}
               </span>
             </div>
@@ -97,14 +97,14 @@ export default async function CollegeDetailPage({
           <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[1.4fr_0.6fr]">
             <div className="space-y-8">
               <section>
-                <h2 className="text-base font-semibold text-neutral-900 dark:text-white">
+                <h2 className="text-base font-semibold text-slate-900 dark:text-white">
                   Overview
                 </h2>
-                <p className="mt-2 text-sm leading-7 text-neutral-600 dark:text-neutral-300">
+                <p className="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">
                   {college.description}
                 </p>
-                <div className="mt-4 rounded-xl bg-neutral-50 p-4 text-sm text-neutral-700 dark:bg-neutral-950 dark:text-neutral-200">
-                  <div className="font-medium text-neutral-900 dark:text-white">
+                <div className="mt-4 rounded-xl bg-slate-50 p-4 text-sm text-slate-700 dark:bg-slate-950 dark:text-slate-200">
+                  <div className="font-medium text-slate-900 dark:text-white">
                     Address
                   </div>
                   <div className="mt-1">{college.address}</div>
@@ -113,7 +113,7 @@ export default async function CollegeDetailPage({
 
               <section>
                 <div className="flex items-center justify-between">
-                  <h2 className="text-base font-semibold text-neutral-900 dark:text-white">
+                  <h2 className="text-base font-semibold text-slate-900 dark:text-white">
                     Courses
                   </h2>
                   <Link
@@ -124,9 +124,9 @@ export default async function CollegeDetailPage({
                   </Link>
                 </div>
 
-                <div className="mt-3 overflow-x-auto rounded-xl border border-black/5 dark:border-white/10">
+                <div className="mt-3 overflow-x-auto rounded-xl border border-slate-900/5 dark:border-white/10">
                   <table className="min-w-full text-left text-sm">
-                    <thead className="bg-neutral-50 text-xs text-neutral-600 dark:bg-neutral-950 dark:text-neutral-300">
+                    <thead className="bg-slate-50 text-xs text-slate-600 dark:bg-slate-950 dark:text-slate-300">
                       <tr>
                         <th className="px-4 py-3">Course</th>
                         <th className="px-4 py-3">Duration</th>
@@ -135,17 +135,17 @@ export default async function CollegeDetailPage({
                         <th className="px-4 py-3">Eligibility</th>
                       </tr>
                     </thead>
-                    <tbody className="text-neutral-800 dark:text-neutral-100">
+                    <tbody className="text-slate-800 dark:text-slate-100">
                       {college.courses.map((c) => (
                         <tr
                           key={c.id}
-                          className="border-t border-black/5 dark:border-white/10"
+                          className="border-t border-slate-900/5 dark:border-white/10"
                         >
                           <td className="px-4 py-3 font-medium">{c.name}</td>
                           <td className="px-4 py-3">{c.duration} Years</td>
                           <td className="px-4 py-3">{c.category}</td>
                           <td className="px-4 py-3">₹{c.fees.toLocaleString("en-IN")}</td>
-                          <td className="px-4 py-3 text-neutral-600 dark:text-neutral-300">
+                          <td className="px-4 py-3 text-slate-600 dark:text-slate-300">
                             {c.eligibility}
                           </td>
                         </tr>
@@ -157,11 +157,11 @@ export default async function CollegeDetailPage({
             </div>
 
             <aside className="space-y-4">
-              <div className="rounded-xl border border-black/5 bg-white p-5 shadow-md dark:border-white/10 dark:bg-neutral-900">
-                <h3 className="text-sm font-semibold text-neutral-900 dark:text-white">
+              <div className="rounded-xl border border-slate-900/5 bg-white p-5 shadow-md dark:border-white/10 dark:bg-slate-900">
+                <h3 className="text-sm font-semibold text-slate-900 dark:text-white">
                   Apply
                 </h3>
-                <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300">
+                <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
                   Interested in {college.name}? Start your application.
                 </p>
                 <button className="mt-4 h-11 w-full rounded-xl bg-blue-600 text-sm font-medium text-white hover:bg-blue-700">
@@ -169,12 +169,12 @@ export default async function CollegeDetailPage({
                 </button>
               </div>
 
-              <div className="rounded-xl border border-black/5 bg-white p-5 shadow-md dark:border-white/10 dark:bg-neutral-900">
-                <h3 className="text-sm font-semibold text-neutral-900 dark:text-white">
+              <div className="rounded-xl border border-slate-900/5 bg-white p-5 shadow-md dark:border-white/10 dark:bg-slate-900">
+                <h3 className="text-sm font-semibold text-slate-900 dark:text-white">
                   Location
                 </h3>
-                <div className="mt-3 h-40 w-full rounded-xl bg-neutral-100 dark:bg-neutral-800" />
-                <p className="mt-2 text-xs text-neutral-600 dark:text-neutral-300">
+                <div className="mt-3 h-40 w-full rounded-xl bg-slate-100 dark:bg-slate-800" />
+                <p className="mt-2 text-xs text-slate-600 dark:text-slate-300">
                   Google Map placeholder
                 </p>
               </div>

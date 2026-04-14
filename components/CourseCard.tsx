@@ -27,16 +27,16 @@ export function CourseCard({ course }: Props) {
       : `/courses/3-year/${course.slug}`;
 
   return (
-    <div className="rounded-xl border border-black/5 bg-white p-5 shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl dark:border-white/10 dark:bg-neutral-900">
+    <div className="rounded-xl border border-slate-900/5 bg-white p-5 shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl dark:border-white/10 dark:bg-slate-900">
       <div className="flex items-start justify-between gap-4">
         <div className="min-w-0">
           <Link
             href={detailsHref}
-            className="block truncate text-base font-semibold text-neutral-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-400"
+            className="block truncate text-base font-semibold text-slate-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-400"
           >
             {course.name}
           </Link>
-          <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-300">
+          <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
             {course.category} • {course.duration} Years
           </p>
         </div>
@@ -45,12 +45,12 @@ export function CourseCard({ course }: Props) {
         </span>
       </div>
 
-      <p className="mt-3 text-sm text-neutral-600 dark:text-neutral-300">
+      <p className="mt-3 text-sm text-slate-600 dark:text-slate-300">
         Eligibility: {course.eligibility}
       </p>
 
       <div className="mt-4 flex items-center justify-between">
-        <div className="text-sm text-neutral-600 dark:text-neutral-300">
+        <div className="text-sm text-slate-600 dark:text-slate-300">
           {course.college.city}, {course.college.state}
         </div>
         <Link

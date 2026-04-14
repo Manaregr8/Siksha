@@ -49,7 +49,7 @@ const features: Feature[] = [
 
 function IconChip({ Icon }: { Icon: Feature["Icon"] }) {
   return (
-    <div className="grid h-11 w-11 place-items-center rounded-2xl border border-black/10 bg-white/70 shadow-sm backdrop-blur dark:border-white/10 dark:bg-neutral-950/60">
+    <div className="grid h-11 w-11 place-items-center rounded-2xl border border-slate-900/10 bg-white/70 shadow-sm backdrop-blur dark:border-white/10 dark:bg-slate-950/60">
       <Icon className="h-5 w-5 text-blue-700 dark:text-blue-300" />
     </div>
   );
@@ -57,7 +57,7 @@ function IconChip({ Icon }: { Icon: Feature["Icon"] }) {
 
 export function WhyJoinSection() {
   return (
-    <section className="relative overflow-hidden bg-neutral-50 py-16 dark:bg-neutral-950">
+    <section className="relative overflow-hidden bg-slate-50 py-16 dark:bg-slate-950">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -left-20 top-16 h-72 w-72 rounded-full bg-gradient-to-br from-indigo-500/15 via-blue-500/10 to-cyan-500/10 blur-2xl" />
       </div>
@@ -65,16 +65,16 @@ export function WhyJoinSection() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2">
           <div>
-            <h2 className="text-2xl font-semibold tracking-tight text-neutral-900 dark:text-white sm:text-3xl">
+            <h2 className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-white sm:text-3xl">
               Why join our programs
             </h2>
-            <p className="mt-3 max-w-2xl text-sm leading-7 text-neutral-600 dark:text-neutral-300">
+            <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-600 dark:text-slate-300">
               Minimal icons, crisp hierarchy, and a clean grid — premium by default.
             </p>
           </div>
 
           <div className="lg:justify-self-end">
-            <div className="relative overflow-hidden rounded-3xl border border-black/5 bg-white/70 shadow-md backdrop-blur-xl dark:border-white/10 dark:bg-neutral-900/60">
+            <div className="relative overflow-hidden rounded-3xl border border-slate-900/5 bg-white/70 shadow-md backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/60">
               <div className="aspect-[4/3] w-full max-w-lg">
                 <Image
                   src="/dizitaladda%20classroom.webp"
@@ -92,15 +92,15 @@ export function WhyJoinSection() {
           {features.map((f) => (
             <div
               key={f.title}
-              className="group rounded-3xl border border-black/5 bg-white/70 p-6 shadow-md backdrop-blur-xl transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl dark:border-white/10 dark:bg-neutral-900/60"
+              className="group rounded-3xl border border-slate-900/5 bg-white/70 p-6 shadow-md backdrop-blur-xl transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl dark:border-white/10 dark:bg-slate-900/60"
             >
               <div className="flex items-start gap-4">
                 <IconChip Icon={f.Icon} />
                 <div>
-                  <div className="text-base font-semibold tracking-tight text-neutral-900 dark:text-white">
+                  <div className="text-base font-semibold tracking-tight text-slate-900 dark:text-white">
                     {f.title}
                   </div>
-                  <div className="mt-2 text-sm leading-7 text-neutral-600 dark:text-neutral-300">
+                  <div className="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">
                     {f.description}
                   </div>
                 </div>

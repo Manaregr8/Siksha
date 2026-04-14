@@ -16,11 +16,11 @@ export default function Error({
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-      <div className="rounded-xl border border-black/5 bg-white p-6 shadow-md dark:border-white/10 dark:bg-neutral-900">
-        <h1 className="text-lg font-semibold text-neutral-900 dark:text-white">Something went wrong</h1>
-        <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300">{error.message}</p>
+      <div className="rounded-xl border border-slate-900/5 bg-white p-6 shadow-md dark:border-white/10 dark:bg-slate-900">
+        <h1 className="text-lg font-semibold text-slate-900 dark:text-white">Something went wrong</h1>
+        <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">{error.message}</p>
         {error.digest ? (
-          <p className="mt-2 text-xs text-neutral-500 dark:text-neutral-400">
+          <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">
             Digest: <span className="font-mono">{error.digest}</span>
           </p>
         ) : null}
